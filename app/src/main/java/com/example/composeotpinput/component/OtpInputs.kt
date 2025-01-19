@@ -22,7 +22,7 @@ import com.example.composeotpinput.ui.theme.Typography
 
 /**
  * Overview:
- * `OtpDigitsView` is a custom composable for displaying and managing OTP (One-Time Password) input fields.
+ * `OtpInputs` is a custom composable for displaying and managing OTP (One-Time Password) input fields.
  * It divides the OTP input into separate fields for each digit, allowing smooth navigation between fields.
  *
  * Purpose:
@@ -42,7 +42,7 @@ import com.example.composeotpinput.ui.theme.Typography
  *
  * Example:
  * ```
- * OtpDigitsView(
+ * OtpInputs(
  *     otpCode = "123",
  *     onOtpChange = { newOtp ->
  *         println("New OTP: $newOtp")
