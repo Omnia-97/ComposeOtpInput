@@ -26,6 +26,7 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -40,7 +41,7 @@ fun OtpTextField(
     modifier: Modifier = Modifier,
     focusedBorderColor: Color = AppColors.DarkBlue900,
     unfocusedBorderColor: Color = AppColors.Gray400,
-    textStyle: TextStyle = Typography.titleLarge.copy(color = AppColors.DarkBlue900),
+    textStyle: TextStyle = Typography.titleLarge.copy(color = AppColors.DarkBlue900, textAlign = TextAlign.Center),
     width: Dp = 56.67.dp,
     isError: Boolean = false,
     errorBorderColor: Color = AppColors.Red,
@@ -62,7 +63,8 @@ fun OtpTextField(
                 },
                 shape = RoundedCornerShape(8.dp)
             )
-            .background(Color.White, RoundedCornerShape(8.dp))
+            .background(Color.White, RoundedCornerShape(8.dp)),
+        contentAlignment = Alignment.Center
     ) {
         TextField(
             value = value,
